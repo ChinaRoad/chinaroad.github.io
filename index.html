@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PP手机停车_有车一族最爱</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="keywords" content="手机停车,PP停车,PP手机停车,移动支付,手机支付" />
+    <meta name="description" content="手机停车,PP停车,PP手机停车,移动支付,手机支付" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="Shortcut Icon" href="favicon.ico">
+    <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+    <script src="./js/nicescroll.min.js"></script>
+    <script src="./js/jquery.simplemodal.js"></script>
+    <script type="text/javascript" src="./player/flowplayer-3.2.12.min.js"></script>
+</head>
+
+<body scroll="no">
+    <div class="topsection">
+        <div class="_topsection">
+            <div class="header">
+                <div class="left bgleft">
+                    <img src="./img/nav_left.png"></div>
+                <div class="left menu">
+                    <a href="index.html">
+                        <div class="left logo">
+                            <img src="./img/logo.png"></div>
+                    </a>
+                    <div class="right menuitems">
+                        <a class="left menuitem selected" href="javascript:;">首&nbsp;&nbsp;&nbsp;页</a>
+                        <a class="left menuitem" href="business-cooperation.html">业务合作</a>
+                        <a class="left menuitem" href="service-support.html">服务支持</a>
+                        <a class="left menuitem" href="about.html">关于我们</a>
+                    </div>
+                </div>
+                <div class="right bgright">
+                    <img src="./img/nav_right.png"></div>
+            </div>
+            <div class="nav_content">
+                <a href="https://itunes.apple.com/cn/app/pp-shou-ji-ting-che/id721968122?mt=8" target="_blank">
+                    <input class="download_btn" type="button" value="iPhone下载"></a>
+                <a href="files/parkpay.apk">
+                    <input class="download_btn _download_btn" type="button" value="Android下载"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="middlesection">
+        <div class="parking_pot">
+            <p class="parking_pot_img"></p>
+            <p class="parking_text">
+                <span class="parking_text1">查找附近的停车场</span>
+                <span class="parking_text2">你可以查找附近或者目的地的停车场，方便快捷找到停车位。</span>
+            </p>
+        </div>
+        <div class="QR_Code">
+            <p class="QR_Code_text">
+                <span class="QR_Code_text1">扫一扫，快捷进场</span>
+                <span class="QR_Code_text2">进场无需摇窗，无需拿卡，扫一扫二维码即可入场。</span>
+            </p>
+            <p class="QR_Code_img"></p>
+        </div>
+        <div class="parking_fee">
+            <p class="parking_fee_img"></p>
+            <p class="parking_fee_text">
+                <span class="parking_fee_text1">停车费用及时看</span>
+                <span class="parking_fee_text2">随时随地查看停车费用，及时出场。</span>
+            </p>
+        </div>
+        <div class="mobile_payment">
+            <p class="mobile_payment_text">
+                <span class="mobile_payment_text1">手机支付费用</span>
+                <span class="mobile_payment_text2">出场扫描二维码，一键支付停车费用，方便快捷，不耗时。</span>
+            </p>
+            <p class="mobile_payment_img"></p>
+        </div>
+        <!-- preload the images -->
+        <div style="display:none">
+            <img src="img/x.png" alt=""></div>
+        <div class="image" id="video-dialog">
+            <a href="./video.html" class='youtube'>
+                <img  src="./img/bf.png" />
+            </a>
+        </div>
+        <div id="basic-modal-content">
+            <a href="./pp.flv" style="display:block;width:960px;height:540px" id="player"></a>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="footer">
+        <p>
+            深圳市神州路路通网络科技有限公司&nbsp;&nbsp;2011-2013&nbsp;&nbsp;&copy&nbsp;&nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;&nbsp;&nbsp;
+            <span style='float:right'>粤ICP备-13071123号-1</span>
+        </p>
+        <p>
+            <a href="http://weibo.com/u/3781973565" target="_blank" class="weibo-grey"></a>
+            <a href="http://t.qq.com/P_PAY660" target="_blank" class="tencent-grey"></a>
+            <a href="javascript:;" class="wechat-grey wechat"></a>
+            <a href="https://cert.ebs.gov.cn/Cert/Index/0d943f2f-1ffb-4fe3-a9bd-9c3b1bfda6e7" target="_blank" class="ebs-cert" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示"></a>
+        </p>
+        <div class="wechat_jpg">
+            <img src="img/wet_chat.jpg" />
+        </div>
+    </div>
+</body>
+    <script type="text/javascript">
+        $(function(){
+            $("body").niceScroll({cursorcolor:"#00b178",cursorborder:0});   
+            $(".wechat").mouseenter(function(){
+                $('.wechat_jpg').show();
+                $(".wechat").mouseout(function(){
+                    $('.wechat_jpg').hide();
+                })
+            })
+            // Load dialog on click
+            $('#video-dialog .youtube').click(function (e) {
+                $('#basic-modal-content').modal();
+                flowplayer("player", "./player/flowplayer-3.2.16.swf");
+                return false;
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe8520de9f7e8f20a4d6880bc36517e92' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</html>

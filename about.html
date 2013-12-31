@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>关于我们_PP手机停车</title>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="keywords" content="手机停车,PP停车,PP手机停车,移动支付,手机支付" />
+    <meta name="description" content="手机停车,PP停车,PP手机停车,移动支付,手机支付" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="Shortcut Icon" href="favicon.ico">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=16398096469aa2c92d7b87506732cd90&v=1.1&services=true"></script>
+    <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+    <script src="./js/nicescroll.min.js"></script>
+</head>
+
+<body scroll="no">
+	<div class="topsection-info">
+		<div class="header">
+			<div class="left bgleft">
+				<img src="./img/nav_left.png"></div>
+			<div class="left menu">
+				<a href="index.html">
+                        <div class="left logo">
+                            <img src="./img/logo.png">
+                        </div>
+                    </a>
+				<div class="right menuitems">
+					<a class="left menuitem" href="index.html">首&nbsp;&nbsp;&nbsp;页</a>
+                    <a class="left menuitem" href="business-cooperation.html">业务合作</a>
+					<a class="left menuitem" href="service-support.html">服务支持</a>
+					<a class="left menuitem selected" href="javascript:;">关于我们</a>
+				</div>
+			</div>
+			<div class="right bgright">
+				<img src="./img/nav_right.png"></div>
+		</div>
+		<div class="info-head">
+			<div class="head-cntitle">关于我们</div>
+			<div class="head-entitle">About Us</div>
+		</div>
+	</div>
+
+	<div class="middlesection">
+		<div class="left about">
+			<img src="./img/about-1.png">
+			<img src="./img/about-2.png">
+			<img src="./img/about-3.png">
+			<div style="clear: both"></div>
+			<div class="text _text1">
+                神州路路通（Chinaroad）创立于2013年1月，为<a style='text-decoration: none;
+color: #00B66C;' href="http://www.sinomaster.com">神州通集团</a>和<a style='text-decoration: none;
+color: #00B66C;' href="http://www.007ka.com">年年卡集团</a>投资的高新技术企业，专注于中国移动互联网领域发展，梦想为中国广大车主提供一款伟大的互联网产品。团队核心成员来自神州通付、迅雷、腾讯、奇虎360、六间房、品果科技、Symbio、Gameloft等国内顶尖互联网公司。
+            </div>
+            <div class="text" style="margin-top: 15px">
+                「PP手机停车」是神州路路通于2013年10月推出的一款以“停车支付”为核心，“找停车场”、“停车场找车”等为辅助功能的手机软件。通过「PP手机停车」，可以让广大车主在日常的生活中更加方便，体验移动互联网带来的无比快捷。
+            </div>
+
+			</div>
+        <div style="clear: both"></div>
+		<div class="left about" style='margin:30px 0 20px 0;'>
+			<div class="text _text" id='aboutAddress' style="width:400px">
+				<ul>
+                    <li style="font-size: 16px;margin-bottom: 30px;color:#00B66C;text-indent: 0;">联系我们</li>
+                    <li>合作热线：400-6262-660</li>
+                    <li>官方邮箱：kefu@660pp.com</li>
+                    <li>邮编：518102</li>
+					<li>地址：深圳市宝安区宝源路互联网产业基地A区3栋6楼</li>
+                </ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+    <div class="footer">
+           <p>深圳市神州路路通网络科技有限公司&nbsp;&nbsp;2011-2013&nbsp;&nbsp;&copy&nbsp;&nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;&nbsp;&nbsp;<span style='float:right'>粤ICP备-13071123号-1</span></p>
+           <p>
+            <a href="http://weibo.com/u/3781973565" target="_blank" class="weibo-grey"></a>
+            <a href="http://t.qq.com/P_PAY660" target="_blank" class="tencent-grey"></a>
+            <a href="javascript:;" class="wechat-grey wechat"></a>
+             <a href="https://cert.ebs.gov.cn/Cert/Index/0d943f2f-1ffb-4fe3-a9bd-9c3b1bfda6e7" target="_blank" class="ebs-cert" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示"></a>
+        </p>
+        <div class="wechat_jpg"><img src="img/wet_chat.jpg"></div>
+    </div>
+</body>
+	<script type="text/javascript">
+		$(function(){
+			$("body").niceScroll({cursorcolor:"#00b178",cursorborder:0});	
+			$("#aboutAddress").parent().prepend("<div id='map'></div>")
+			// 百度地图API功能
+			var map = new BMap.Map("map");
+			map.enableDragging();//启用地图拖拽事件，默认启用(可不写)  
+			map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+			map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+			map.enableKeyboard();//启用键盘上下左右键移动地图
+			map.centerAndZoom(new BMap.Point(113.877601,22.569322), 17);//中心
+			//鱼骨控件
+			//map.addControl(new BMap.NavigationControl()); 
+
+			var pt = new BMap.Point(113.877601,22.569322);
+			var myIcon = new BMap.Icon("./img/point-company.png", new BMap.Size(40,30));
+			var marker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+			map.addOverlay(marker);              // 将标注添加到地图中
+
+			var infoWindow2 = new BMap.InfoWindow("深圳市宝安区西乡宝源路互联网产业基地A区3栋6楼");
+			marker.addEventListener("click", function(){this.openInfoWindow(infoWindow2);});
+
+			var parteners = ['113.878364,22.568955','113.87615,22.571345','113.880646,22.570206','113.880781,22.567874','113.874273,22.569856'];
+			$.each(parteners,function(index,item){
+				var ll = item.split(",");
+				var lat = ll[0];
+				var lng = ll[1];
+				var t_pt = new BMap.Point(lat,lng);
+				var t_myIcon = new BMap.Icon("./img/pp.png", new BMap.Size(40,30));
+				var t_marker = new BMap.Marker(t_pt,{icon:t_myIcon});  // 创建标注
+				map.addOverlay(t_marker);              // 将标注添加到地图中
+
+				// var t_infoWindow = new BMap.InfoWindow("支持PP停车");
+				// t_marker.addEventListener("click", function(){this.openInfoWindow(t_infoWindow);});
+			})
+            $(".wechat").mouseenter(function(){
+              $('.wechat_jpg').show();
+                $(".wechat").mouseout(function(){
+                    $('.wechat_jpg').hide();
+                })
+            })
+		}); 
+</script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe8520de9f7e8f20a4d6880bc36517e92' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</html>
