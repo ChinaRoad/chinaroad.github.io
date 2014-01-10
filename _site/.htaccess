@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /home
+
+RewriteCond %{HTTP_USER_AGENT} "android|blackberry|ipad|iphone|ipod|iemobile|opera mobile|palmos|webos|googlebot-mobile" [NC]
+RewriteCond %{REQUEST_URI} !^/home/mobile/
+RewriteRule ^(.*)$ mobile/$1 [L,QSA]
+
+# 404
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule .? index.html [R=301,L]
