@@ -15,6 +15,7 @@ a{
     hide-focus: expression( this.hideFocus=true );
     outline: none;
 }
+a, select, input, object/* Flash Item */ { outline: none; }
 .left {
     float: left;
 }
@@ -443,12 +444,12 @@ a.selected:link{
 }
 /*********************20131217*********************/
 .nav_content{
-    padding-top: 380px;
+    padding-top: 414px;
 }
-.download_btn {
+.download_apple {
     border: none;
-    width: 210px;
-    height: 84px;
+    width: 218px;
+    height: 60px;
     float: left;
     cursor: pointer;
     color: #fff;
@@ -456,23 +457,32 @@ a.selected:link{
     padding-left: 50px;
     padding-top: 2px;
     font-family: 微软雅黑;
-    background: url("../img/iphone.png");
+    background: url("../img/apple.png");
 }
-.download_btn:hover {
-   background: url("../img/iphone_focus.png"); 
+.download_apple:hover {
+   background: url("../img/apple_hover.png"); 
 }
-.download_btn:active {
-    background: url("../img/iphone_click.png");
+.download_apple:active {
+    background: url("../img/apple_down.png");
 }
-._download_btn {
+.download_android {
+    border: none;
+    width: 218px;
+    height: 60px;
+    float: left;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    padding: 2px 0 0 50px;
+    font-family: 微软雅黑;
     margin-left: 20px;
     background: url("../img/android.png");
 }
-._download_btn:hover{
-  background: url("../img/android_focus.png");  
+.download_android:hover{
+  background: url("../img/android_hover.png");  
 }
-._download_btn:active{
-  background: url("../img/android_click.png");  
+.download_android:active{
+  background: url("../img/android_down.png");  
 }
 .new_middle {
     width: 1000px;
